@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;500&display=swap');
+
+:root {
+  --color-bg: #222831;
+  --color-article-bg: #30475e;
+  --color-bkpk-bg: #f4a41d;
+  --color-bkpk-red: #7c1541;
+  --color-link-hover: #ffeb99;
+  --font-family-headers: Poppins, sans-serif;
+  --font-family-content: Montserrat, sans-serif;
+  --font-family-code: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+  font-family: var(--font-family-content);
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family-headers);
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 5rem;
+}
+
+p, li, a {
+  font-weight: 500;
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: .25s;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: white;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main";
+  padding: 50px 0;
+  text-align: center;
+}
+
+aside {
+  background-color: var(--color-dark-gray);
+  grid-area: sidebar;
+  position: sticky;
+  top: 0;
+}
+
+#photo-of-me {
+  border: 5px solid var(--color-article-bg);
+  border-radius: 50%;
+  height: 300px;
+}
+
+.nav-icons {
+  width: 80%;
+  max-width: 400px;
+  margin: 4px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-icons img {
+  width: 50px;
+}
+
+.nav-icons img:hover {
+  filter: brightness(0) saturate(100%) invert(83%) sepia(50%) saturate(320%) hue-rotate(349deg) brightness(104%) contrast(101%);
+}
+
+main h2 {
+  margin-top: 10px;
+}
+
+main article {
+  background-color: var(--color-article-bg);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  grid-template-columns: minmax(75px, 175px) 1fr;
+  grid-template-areas: 
+    "article-header article-content";
+  display: grid;
+  gap: 0 30px;
+}
+
+article h2 {
+  font-size: 3.75rem;
+  font-family: var(--font-bkbk-headers);
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+article img {
+  width: 100%;
+  max-width: 175px;
+}
+
+#bkpk-logo {
+  background-color: var(--color-bkpk-bg);
+}
+
+article header {
+  grid-area: article-header;
+}
+
+article .content {
+  grid-area: article-content;
+}
+
+article .content .button {
+  display: inline-block;
+}
+
+.content {
+  text-align: left;
+}
+
+.content ul li + li {
+  margin-top: 10px;
+}
+
+.button { 
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-bkpk-red);
+  color: white;
+  margin-top: 15px;
+  padding: 5px 10px
+}
+
+.button:hover {
+  color: var(--color-bkpk-red);
+  background-color: var(--color-bkpk-bg);
+  transition: .25s;
+}
+
