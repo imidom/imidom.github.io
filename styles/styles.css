@@ -62,7 +62,7 @@ body {
 }
 
 aside {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-bg);
   grid-area: sidebar;
   position: sticky;
   top: 0;
