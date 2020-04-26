@@ -165,3 +165,9 @@ article .content .button {
   transition: .25s;
 }
 
+@media (max-width: 800px) {
+  main article {
+    grid-template-columns: minmax(50px, 100px) 1fr;
+  }
+  
+}
